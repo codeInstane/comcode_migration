@@ -82,7 +82,7 @@ namespace comcode_migration
                                     Initial Catalog = persons;
                                     Trusted_Connection=True";
                     //  Persist Security Info=False;
-                    //   User ID = AzureServerAdmin; Password=Password123;
+                    //   
                     //   MultipleActiveResultSets=False;Encrypt=True;
                     //   TrustServerCertificate=False";
 
