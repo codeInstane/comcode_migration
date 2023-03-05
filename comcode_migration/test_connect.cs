@@ -15,7 +15,7 @@ namespace comcode_migration
     {
 
         // Connection string for SQL Server
-        //private readonly String connectionString = @"Data Source=tcp:sqlsrv-4s-sit-001.database.windows.net,1433;Initial Catalog = sqldb-4s-sit;Persist Security Info=False;User ID = AzureServerAdmin; Password=Password123;MultipleActiveResultSets=False;Encrypt=True;TrustServerCertificate=False;";
+        //private readonly String connectionString = @"Data Source=tcp:sqlsrv-4s-sit-001.database.windows.net,1433;Initial Catalog = sqldb-4s-sit;Persist Security Info=False;;MultipleActiveResultSets=False;Encrypt=True;TrustServerCertificate=False;";
 
         // Path to the Excel file
         //private readonly String filePath = "C:\\myExcelFile.xlsx";
@@ -27,8 +27,7 @@ namespace comcode_migration
             //String connectionString = @"Data Source=tcp:sqlsrv-4s-sit-001.database.windows.net,1433;
             //                            Initial Catalog = sqldb-4s-sit;
             //                            Persist Security Info=False;
-            //                            User ID = AzureServerAdmin; 
-            //                            Password=Password123;
+            //                            
             //                            MultipleActiveResultSets=False;
             //                            Encrypt=True;TrustServerCertificate=False;";
 

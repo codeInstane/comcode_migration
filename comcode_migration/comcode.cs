@@ -18,7 +18,7 @@ namespace comcode_migration
     {
 
         // Connection string for SQL Server
-        //private readonly String ConnStr = @"Data Source=tcp:sqlsrv-4s-sit-001.database.windows.net,1433;Initial Catalog = sqldb-4s-sit;Persist Security Info=False;User ID = AzureServerAdmin; Password=Password123;MultipleActiveResultSets=False;Encrypt=True;TrustServerCertificate=False;";
+        //private readonly String ConnStr = @"Data Source=tcp:sqlsrv-4s-sit-001.database.windows.net,1433;Initial Catalog = sqldb-4s-sit;Persist Security Info=False;;MultipleActiveResultSets=False;Encrypt=True;TrustServerCertificate=False;";
 
         // Path to the Excel file
         // private readonly String filePath = "C:\\myExcelFile.xlsx";
@@ -73,10 +73,8 @@ namespace comcode_migration
 
             internal void InsertDataToDB(List<comcodetable> people)
             {
-
-                try
+               try
                 {
-
 
                     string connectString = @"Data Source=DESKTOP-EVDH83E\SQLEXPRESS;
                                     Initial Catalog = persons;
@@ -87,18 +85,12 @@ namespace comcode_migration
                     //   TrustServerCertificate=False";
 
 
-
-
                     SqlConnectionStringBuilder builder =
                         new SqlConnectionStringBuilder(connectString);
                     Console.WriteLine("Original: " + builder.ConnectionString);
 
                     //  DataSource = "HOIT2105NB08\\SQLEXPRESS",
                     //     InitialCatalog = "person",
-
-                    //UserID = "AzureServerAdmin",
-                    //     Password = "Password123",
-
 
                     //
                     //}.ToString()))
