@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.33328.57
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "comcode_migration", "comcode_migration\comcode_migration.csproj", "{5B3F176C-CA63-4D3F-AA41-72F062DF258E}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{5B3F176C-CA63-4D3F-AA41-72F062DF258E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5B3F176C-CA63-4D3F-AA41-72F062DF258E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5B3F176C-CA63-4D3F-AA41-72F062DF258E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5B3F176C-CA63-4D3F-AA41-72F062DF258E}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {4314FC84-A93B-4E49-930E-7CEF7AD5654A}
+	EndGlobalSection
+EndGlobal
