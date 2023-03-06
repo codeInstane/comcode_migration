@@ -73,7 +73,10 @@ namespace comcode_migration
 
             internal void InsertDataToDB(List<comcodetable> people)
             {
-               try
+                string dup_path = @"C:\Users\staff\Documents\computer programming\C#\comcode_migration\duplicated_comcode.txt";
+                string mig_path = @"C:\Users\staff\Documents\computer programming\C#\comcode_migration\migrated_comcode.txt";
+
+                try
                 {
 
                     string connectString = @"Data Source=DESKTOP-EVDH83E\SQLEXPRESS;
@@ -132,19 +135,30 @@ namespace comcode_migration
                                 command.ExecuteNonQuery();
 
                                 migr++;
-                                Console.WriteLine($"Now mirgrating: \t{firstname}\t{lastname}\t{category}");                                
+                                Console.WriteLine($"Now mirgrating: \t{firstname}\t{lastname}\t{category}");
+                                string text = $"Now mirgrating: \t{firstname}\t{lastname}\t{category}\n";
+                                
+                                File.AppendAllText(mig_path, text);
                                 //Debug.WriteLine("Now mirgrating", firstname + "  " + lastname + "   " + category);   
                             }
                             else
-                            {                                
-                                Console.WriteLine($"Duplicates comcode: \t{firstname}\t{lastname}\t{category}");
-                                dups++;                                
+                            {
+                                dups++;
+                                Console.WriteLine($"Duplicates comcode: \t{firstname}\t{lastname}\t{category}");                                
+                                string text = $"Duplicates comcode: \t{firstname}\t{lastname}\t{category}\n";
+
+                                File.AppendAllText(dup_path, text);
                                 //Debug.WriteLine("Duplicates comcode", firstname + "  " + lastname + "   " + category);
                             }
                         }
                         Console.WriteLine($"Total number of records mirgate :\t{ migr}");
                         Console.WriteLine($"Total number of records duplicate :\t{ dups}");
 
+                        File.AppendAllText(mig_path, $"Total number of records mirgate :\t{ migr}\n");
+                        File.AppendAllText(mig_path, $"Total number of records duplicate :\t{ dups}");
+
+                        File.AppendAllText(dup_path, $"Total number of records mirgate :\t{ migr}\n");
+                        File.AppendAllText(dup_path, $"Total number of records duplicate :\t{ dups}");
                     }
                 }
                 catch (Exception ex)
